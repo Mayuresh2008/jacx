@@ -1,0 +1,62 @@
+{
+  "batch_id": "batch_1785316506",
+  "timestamp": "2026-07-29 14:47:12",
+  "summary": {
+    "total_tested": 10,
+    "passed_count": 8,
+    "failed_count": 2,
+    "pass_rate_percent": 80.0,
+    "top_bug_category": "memory_resolution_bug",
+    "bug_type_counts": {
+      "memory_resolution_bug": 1,
+      "route_selection_bug": 1
+    },
+    "category_failure_counts": {
+      "memory_save": 1,
+      "prompt_generation": 1
+    },
+    "route_failure_counts": {
+      "browser_search_memory": 1,
+      "unsupported": 1
+    },
+    "system_diagnoses": [
+      {
+        "component": "intent_router",
+        "root_cause": "Router classifier overtriggers to file_search or misroutes prompt/planning commands.",
+        "remediation": "Refine route priority rules in intent_router.py so file_search requires explicit file extensions or path keywords."
+      },
+      {
+        "component": "memory_system",
+        "root_cause": "Memory write and read handlers use inconsistent canonical key normalization (e.g. default_browser vs preferred_browser).",
+        "remediation": "Standardize key normalization across local memory and Supabase persistence layers in normalize_memory_key()."
+      }
+    ],
+    "grouped_failures": {
+      "memory_resolution_bug": [
+        {
+          "test_id": "TC-002",
+          "input": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+          "category": "memory_save",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected memory route, got browser_search_memory"
+          ]
+        }
+      ],
+      "route_selection_bug": [
+        {
+          "test_id": "TC-006",
+          "input": "generat prompt for opencode db refactor",
+          "category": "prompt_generation",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected prompt_generator route, got unsupported"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785316506",
+    "elapsed_seconds": 125.66
+  },
+  "result_count": 10
+}

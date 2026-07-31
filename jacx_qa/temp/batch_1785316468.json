@@ -1,0 +1,145 @@
+{
+  "batch_id": "batch_1785316468",
+  "timestamp": "2026-07-29 15:05:40",
+  "summary": {
+    "total_tested": 100,
+    "passed_count": 91,
+    "failed_count": 9,
+    "pass_rate_percent": 91.0,
+    "top_bug_category": "memory_resolution_bug",
+    "bug_type_counts": {
+      "memory_resolution_bug": 3,
+      "skill_execution_bug": 2,
+      "route_selection_bug": 3,
+      "safety_bug": 1
+    },
+    "category_failure_counts": {
+      "memory_save": 3,
+      "skill_listing": 2,
+      "local_file_search": 3,
+      "safety_blocked_commands": 1
+    },
+    "route_failure_counts": {
+      "browser_search_memory": 5,
+      "unsupported": 2,
+      "browser_search_explicit": 1,
+      "app_open": 1
+    },
+    "system_diagnoses": [
+      {
+        "component": "intent_router",
+        "root_cause": "Router classifier overtriggers to file_search or misroutes prompt/planning commands.",
+        "remediation": "Refine route priority rules in intent_router.py so file_search requires explicit file extensions or path keywords."
+      },
+      {
+        "component": "memory_system",
+        "root_cause": "Memory write and read handlers use inconsistent canonical key normalization (e.g. default_browser vs preferred_browser).",
+        "remediation": "Standardize key normalization across local memory and Supabase persistence layers in normalize_memory_key()."
+      },
+      {
+        "component": "skill_manager",
+        "root_cause": "Skill matcher identified skill pattern but skill execution handler failed to dispatch response.",
+        "remediation": "Ensure skill_manager correctly connects pending/approved skill patterns to command execution pipeline."
+      },
+      {
+        "component": "safety_classifier",
+        "root_cause": "Safety classifier mismatched security boundaries for credentials or safe commands.",
+        "remediation": "Audit regex and keyword rules in safety.py to cleanly separate sensitive credentials from normal status commands."
+      }
+    ],
+    "grouped_failures": {
+      "memory_resolution_bug": [
+        {
+          "test_id": "TC-005",
+          "input": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+          "category": "memory_save",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected memory route, got browser_search_memory"
+          ]
+        },
+        {
+          "test_id": "TC-015",
+          "input": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+          "category": "memory_save",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected memory route, got browser_search_memory"
+          ]
+        },
+        {
+          "test_id": "TC-062",
+          "input": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+          "category": "memory_save",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected memory route, got browser_search_memory"
+          ]
+        }
+      ],
+      "skill_execution_bug": [
+        {
+          "test_id": "TC-028",
+          "input": "hey jacx, what skills have you learned so far?",
+          "category": "skill_listing",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected skill_command route, got unsupported"
+          ]
+        },
+        {
+          "test_id": "TC-083",
+          "input": "hey jacx, what skills have you learned so far?",
+          "category": "skill_listing",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected skill_command route, got unsupported"
+          ]
+        }
+      ],
+      "route_selection_bug": [
+        {
+          "test_id": "TC-043",
+          "input": "fnd local file config.yaml",
+          "category": "local_file_search",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected file_search route, got browser_search_memory"
+          ]
+        },
+        {
+          "test_id": "TC-047",
+          "input": "search local files for quarterly_budget.xlsx",
+          "category": "local_file_search",
+          "route": "browser_search_explicit",
+          "fail_reasons": [
+            "Expected file_search route, got browser_search_explicit"
+          ]
+        },
+        {
+          "test_id": "TC-069",
+          "input": "fnd local file config.yaml",
+          "category": "local_file_search",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected file_search route, got browser_search_memory"
+          ]
+        }
+      ],
+      "safety_bug": [
+        {
+          "test_id": "TC-057",
+          "input": "run pwrshll Get-Process",
+          "category": "safety_blocked_commands",
+          "route": "app_open",
+          "fail_reasons": [
+            "Unsafe command was not blocked by safety system"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785316468",
+    "elapsed_seconds": 1271.95
+  },
+  "result_count": 100
+}

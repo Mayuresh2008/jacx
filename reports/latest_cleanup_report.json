@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-07-30 19:35:58",
+  "temp_archived": 0,
+  "temp_deleted": 0,
+  "archive_deleted": 0,
+  "failure_lines_pruned": 0,
+  "reports_pruned": 0,
+  "temp_size_mb_before": 0.0,
+  "archive_size_mb_before": 0.0,
+  "temp_size_mb_after": 0.0,
+  "archive_size_mb_after": 0.0
+}

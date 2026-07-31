@@ -1,0 +1,16 @@
+Step 1 mode: no inference engine required.
+  AI chat endpoints will not be available.
+  Step 1 command endpoints are active.
+  Energy: nvidia (hw_counter)
+  Model:  step1-stub (stub — Step 1 only)
+  Speech: faster-whisper
+  Scheduler: active
+Starting OpenJarvis API server
+  Engine: stub
+  Model:  step1-stub
+  Agent:  orchestrator
+  URL:    http://127.0.0.1:8000
+INFO:     Started server process [20820]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

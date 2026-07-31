@@ -1,0 +1,168 @@
+  ___                       _                  _     
+ / _ \ _ __   ___ _ __     | | __ _ _ ____   _(_)___ 
+| | | | '_ \ / _ \ '_ \ _  | |/ _` | '__\ \ / / / __|
+| |_| | |_) |  __/ | | | |_| | (_| | |   \ V /| \__ \
+ \___/| .__/ \___|_| |_|\___/ \__,_|_|    \_/ |_|___/
+      |_|                                            
+      Personal AI, On Personal Devices
+
+INFO:     127.0.0.1:60331 - "GET /models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60329 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53438 - "GET /models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53433 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53438 - "GET /models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53433 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53438 - "GET /models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53433 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53438 - "GET /models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53433 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60225 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53265 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53267 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53269 - "GET /v1/memory/stats HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:53266 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53268 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49513 - "GET /v1/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60872 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60873 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60874 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51136 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51137 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60448 - "GET /v1/memory/stats HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:64510 - "GET /v1/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64512 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57043 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53270 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51188 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55100 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54309 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54309 - "OPTIONS /veyra/command HTTP/1.1" 200 OK
+[PIPELINE] raw_input='Find some good mechanical keyboards, but use whatever browser I normally use.' normalized_input='find some good mechanical keyboards but use whatever browser i normally use.' local_intent='search' local_confidence=0.800 cloud_needed=false omniroute_enabled=false omniroute_called=false omniroute_response_type='' cloud_validation_result='' selected_route='browser_search_memory' browser_source='memory' selected_browser='brave' query_before_extractor='Find some good mechanical keyboards, but use whatever browser I normally use.' query_after_extractor='some good mechanical keyboards but use i normally use' removed_phrases=['whatever browser', 'find'] query_validation_passed=true query_used_by_browser_tool='some good mechanical keyboards but use i normally use' final_google_url='https://www.google.com/search?q=some+good+mechanical+keyboards+but+use+i+normally+use' response_message="Searching Google for 'some good mechanical keyboards but use i normally use' in Brave." handler_found=true handler_executed=true tool_executed=false memory_source='resolved' memory_key='preferred_browser' memory_value='brave' skill_matched=false response_message_present=true response_sent_to_frontend=true voice_called_after_text=true last_error='' elapsed_seconds=3.303
+INFO:     127.0.0.1:55100 - "POST /veyra/command HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54309 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54309 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54309 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63855 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59643 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59643 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55130 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55130 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51737 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63855 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63855 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63855 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58514 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58519 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58520 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58523 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58525 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58526 - "GET /v1/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65204 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57814 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60022 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60025 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60026 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60028 - "GET /v1/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65406 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58524 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52978 - "GET /v1/models HTTP/1.1" 200 OK
+[PIPELINE] raw_input='Search for the best AI note-taking apps.' normalized_input='search for the best ai note-taking apps.' local_intent='search' local_confidence=0.850 cloud_needed=false omniroute_enabled=false omniroute_called=false omniroute_response_type='' cloud_validation_result='' selected_route='browser_search_memory' browser_source='memory' selected_browser='' query_before_extractor='Search for the best AI note-taking apps.' query_after_extractor='the best ai note-taking apps' removed_phrases=['search for'] query_validation_passed=true query_used_by_browser_tool='the best ai note-taking apps' final_google_url='https://www.google.com/search?q=the+best+ai+note-taking+apps' response_message="Searching Google for 'the best ai note-taking apps' in Brave." handler_found=true handler_executed=true tool_executed=false memory_source='' memory_key='' memory_value='' skill_matched=false response_message_present=true response_sent_to_frontend=true voice_called_after_text=true last_error='' elapsed_seconds=2.355
+INFO:     127.0.0.1:65204 - "POST /veyra/command HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58514 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57289 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52210 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58514 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58514 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52153 - "GET /health HTTP/1.1" 200 OK
+[PIPELINE] raw_input='Only show the free ones.' normalized_input='only show the free ones.' local_intent='unknown' local_confidence=0.000 cloud_needed=true omniroute_enabled=false omniroute_called=false omniroute_response_type='' cloud_validation_result='' selected_route='unsupported' browser_source='' selected_browser='' query_before_extractor='' query_after_extractor='' removed_phrases=[] query_validation_passed=false query_used_by_browser_tool='' final_google_url='' response_message='I\'m not sure what you mean by "Only show the free ones.". Could you rephrase that?' handler_found=true handler_executed=false tool_executed=false memory_source='' memory_key='' memory_value='' skill_matched=false response_message_present=true response_sent_to_frontend=true voice_called_after_text=true last_error='' elapsed_seconds=23.36
+INFO:     127.0.0.1:58514 - "POST /veyra/command HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55343 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52664 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52662 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56839 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58514 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61615 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63859 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49601 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57191 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+[PIPELINE] raw_input='Can you search for beginner Docker tutorials using my saved browser preference?' normalized_input='search for beginner docker tutorials using my saved browser preference' local_intent='search' local_confidence=0.850 cloud_needed=false omniroute_enabled=false omniroute_called=false omniroute_response_type='' cloud_validation_result='' selected_route='browser_search_memory' browser_source='memory' selected_browser='brave' query_before_extractor='Can you search for beginner Docker tutorials using my saved browser preference?' query_after_extractor='' removed_phrases=['search for'] query_validation_passed=false query_used_by_browser_tool='' final_google_url='' response_message='What would you like me to search for?' handler_found=false handler_executed=false tool_executed=false memory_source='resolved' memory_key='preferred_browser' memory_value='brave' skill_matched=false response_message_present=true response_sent_to_frontend=true voice_called_after_text=true last_error='' elapsed_seconds=0.459
+INFO:     127.0.0.1:55341 - "POST /veyra/command HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53476 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60992 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64062 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+[PIPELINE] raw_input='Can you search for beginner Docker tutorials using my saved browser preference?' normalized_input='search for beginner docker tutorials using my saved browser preference' local_intent='search' local_confidence=0.850 cloud_needed=false omniroute_enabled=false omniroute_called=false omniroute_response_type='' cloud_validation_result='' selected_route='browser_search_memory' browser_source='memory' selected_browser='brave' query_before_extractor='Can you search for beginner Docker tutorials using my saved browser preference?' query_after_extractor='' removed_phrases=['search for'] query_validation_passed=false query_used_by_browser_tool='' final_google_url='' response_message='What would you like me to search for?' handler_found=false handler_executed=false tool_executed=false memory_source='resolved' memory_key='preferred_browser' memory_value='brave' skill_matched=false response_message_present=true response_sent_to_frontend=true voice_called_after_text=true last_error='' elapsed_seconds=0.103
+INFO:     127.0.0.1:55341 - "POST /veyra/command HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53056 - "GET /health HTTP/1.1" 200 OK
+[PIPELINE] raw_input='Research the best budget smartphones under ₹25,000.' normalized_input='research the best budget smartphones under 25000.' local_intent='search' local_confidence=0.800 cloud_needed=false omniroute_enabled=false omniroute_called=false omniroute_response_type='' cloud_validation_result='' selected_route='browser_search_memory' browser_source='memory' selected_browser='' query_before_extractor='Research the best budget smartphones under ₹25,000.' query_after_extractor='the best budget smartphones under 25000' removed_phrases=['research'] query_validation_passed=true query_used_by_browser_tool='the best budget smartphones under 25000' final_google_url='https://www.google.com/search?q=the+best+budget+smartphones+under+25000' response_message="Searching Google for 'the best budget smartphones under 25000' in Brave." handler_found=true handler_executed=true tool_executed=false memory_source='' memory_key='' memory_value='' skill_matched=false response_message_present=true response_sent_to_frontend=true voice_called_after_text=true last_error='' elapsed_seconds=1.303
+INFO:     127.0.0.1:55341 - "POST /veyra/command HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55800 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54786 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59979 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63854 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64986 - "GET /health HTTP/1.1" 200 OK
+[PIPELINE] raw_input="I'd like to read about quantum computing. Open it the usual way." normalized_input='id like to read about quantum computing. open it the usual way.' local_intent='unknown' local_confidence=0.000 cloud_needed=true omniroute_enabled=false omniroute_called=false omniroute_response_type='' cloud_validation_result='' selected_route='unsupported' browser_source='' selected_browser='' query_before_extractor='' query_after_extractor='' removed_phrases=[] query_validation_passed=false query_used_by_browser_tool='' final_google_url='' response_message='I\'m not sure what you mean by "I\'d like to read about quantum computing. Open it the usual way.". Could you rephrase that?' handler_found=true handler_executed=false tool_executed=false memory_source='' memory_key='' memory_value='' skill_matched=false response_message_present=true response_sent_to_frontend=true voice_called_after_text=true last_error='' elapsed_seconds=15.313
+INFO:     127.0.0.1:63854 - "POST /veyra/command HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52244 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53279 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63862 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58113 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63861 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63854 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52244 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52244 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61658 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52244 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52031 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52033 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52031 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52031 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58290 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58291 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58287 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58004 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52031 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52031 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63852 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52031 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49908 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49910 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49908 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58335 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53829 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52350 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52353 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52354 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58335 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58335 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54899 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58335 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56857 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56858 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49620 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59558 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59560 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59556 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59562 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60787 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63854 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63855 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63850 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63857 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49291 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53478 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53480 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53476 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53482 - "GET /v1/managed-agents HTTP/1.1" 200 OK

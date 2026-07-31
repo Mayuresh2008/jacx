@@ -1,0 +1,20 @@
+{
+  "total_rules": 12,
+  "total_batches_analyzed": 37,
+  "total_failures_distilled": 126,
+  "total_duplicates_merged": 11,
+  "last_optimized_at": "2026-07-29 18:12:45",
+  "last_distilled_at": "2026-07-29 16:09:11",
+  "bug_type_rule_counts": {
+    "memory_resolution_bug": 2,
+    "query_extraction_bug": 3,
+    "route_selection_bug": 4,
+    "safety_bug": 2,
+    "skill_execution_bug": 1
+  },
+  "confidence_distribution": {
+    "low": 0,
+    "medium": 4,
+    "high": 8
+  }
+}

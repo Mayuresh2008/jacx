@@ -1,0 +1,19 @@
+{
+  "storage_limits": {
+    "keep_latest_reports": 20,
+    "failure_log_days": 30,
+    "archive_days": 7,
+    "max_temp_storage_mb": 500,
+    "auto_cleanup": true,
+    "brain_optimize_interval_batches": 25
+  },
+  "distillation": {
+    "min_failures_to_distill": 3,
+    "confidence_threshold": 0.6,
+    "merge_similarity_threshold": 0.75,
+    "max_rules_per_bug_type": 50,
+    "auto_distill_after_batch": true
+  },
+  "brain_path": "jacx_brain",
+  "qa_path": "jacx_qa"
+}

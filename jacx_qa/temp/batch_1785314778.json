@@ -1,0 +1,72 @@
+{
+  "batch_id": "batch_1785314778",
+  "timestamp": "2026-07-29 14:18:26",
+  "summary": {
+    "total_tested": 10,
+    "passed_count": 7,
+    "failed_count": 3,
+    "pass_rate_percent": 70.0,
+    "top_bug_category": "memory_resolution_bug",
+    "bug_type_counts": {
+      "query_extraction_bug": 1,
+      "memory_resolution_bug": 2
+    },
+    "category_failure_counts": {
+      "explicit_browser_search": 1,
+      "memory_read": 1,
+      "memory_save": 1
+    },
+    "route_failure_counts": {
+      "browser_search_explicit": 1,
+      "unsupported": 2
+    },
+    "system_diagnoses": [
+      {
+        "component": "query_extractor",
+        "root_cause": "Browser search query extractor is not removing browser trigger words or memory keywords before forming target search URL.",
+        "remediation": "Update query_extraction module to strip phrases like 'saved browser', 'in Brave', and 'using preferred browser' before web routing."
+      },
+      {
+        "component": "memory_system",
+        "root_cause": "Memory write and read handlers use inconsistent canonical key normalization (e.g. default_browser vs preferred_browser).",
+        "remediation": "Standardize key normalization across local memory and Supabase persistence layers in normalize_memory_key()."
+      }
+    ],
+    "grouped_failures": {
+      "query_extraction_bug": [
+        {
+          "test_id": "TC-001",
+          "input": "look up chrome extension manifest v3 in Chrome browser",
+          "category": "explicit_browser_search",
+          "route": "browser_search_explicit",
+          "fail_reasons": [
+            "Search query retained control/browser phrases"
+          ]
+        }
+      ],
+      "memory_resolution_bug": [
+        {
+          "test_id": "TC-002",
+          "input": "can you remind me what project path I saved earlier?",
+          "category": "memory_read",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected memory read route, got unsupported"
+          ]
+        },
+        {
+          "test_id": "TC-003",
+          "input": "jacx, keep in mind that I prefer dark theme",
+          "category": "memory_save",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected memory route, got unsupported"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785314778",
+    "elapsed_seconds": 127.44
+  },
+  "result_count": 10
+}

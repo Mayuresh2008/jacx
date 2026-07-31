@@ -1,0 +1,43 @@
+{
+  "batch_id": "batch_1785320300",
+  "timestamp": "2026-07-29 15:48:21",
+  "summary": {
+    "total_tested": 100,
+    "passed_count": 99,
+    "failed_count": 1,
+    "pass_rate_percent": 99.0,
+    "top_bug_category": "route_selection_bug",
+    "bug_type_counts": {
+      "route_selection_bug": 1
+    },
+    "category_failure_counts": {
+      "local_file_search": 1
+    },
+    "route_failure_counts": {
+      "browser_search_memory": 1
+    },
+    "system_diagnoses": [
+      {
+        "component": "intent_router",
+        "root_cause": "Router classifier overtriggers to file_search or misroutes prompt/planning commands.",
+        "remediation": "Refine route priority rules in intent_router.py so file_search requires explicit file extensions or path keywords."
+      }
+    ],
+    "grouped_failures": {
+      "route_selection_bug": [
+        {
+          "test_id": "TC-090",
+          "input": "fnd local file config.yaml",
+          "category": "local_file_search",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected file_search route, got browser_search_memory"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785320300",
+    "elapsed_seconds": 1.13
+  },
+  "result_count": 100
+}

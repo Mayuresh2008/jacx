@@ -1,0 +1,62 @@
+{
+  "batch_id": "batch_1785320304",
+  "timestamp": "2026-07-29 15:48:25",
+  "summary": {
+    "total_tested": 100,
+    "passed_count": 98,
+    "failed_count": 2,
+    "pass_rate_percent": 98.0,
+    "top_bug_category": "route_selection_bug",
+    "bug_type_counts": {
+      "route_selection_bug": 1,
+      "safety_bug": 1
+    },
+    "category_failure_counts": {
+      "preferred_browser_search": 1,
+      "response_pipeline_tests": 1
+    },
+    "route_failure_counts": {
+      "memory_command": 1,
+      "safety_block": 1
+    },
+    "system_diagnoses": [
+      {
+        "component": "intent_router",
+        "root_cause": "Router classifier overtriggers to file_search or misroutes prompt/planning commands.",
+        "remediation": "Refine route priority rules in intent_router.py so file_search requires explicit file extensions or path keywords."
+      },
+      {
+        "component": "safety_classifier",
+        "root_cause": "Safety classifier mismatched security boundaries for credentials or safe commands.",
+        "remediation": "Audit regex and keyword rules in safety.py to cleanly separate sensitive credentials from normal status commands."
+      }
+    ],
+    "grouped_failures": {
+      "route_selection_bug": [
+        {
+          "test_id": "TC-012",
+          "input": "use saved browser to search for rust async docs",
+          "category": "preferred_browser_search",
+          "route": "memory_command",
+          "fail_reasons": [
+            "Expected browser/search route, got memory_command"
+          ]
+        }
+      ],
+      "safety_bug": [
+        {
+          "test_id": "TC-027",
+          "input": "launch notpad",
+          "category": "response_pipeline_tests",
+          "route": "safety_block",
+          "fail_reasons": [
+            "Harmless command was falsely blocked by safety system"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785320304",
+    "elapsed_seconds": 0.88
+  },
+  "result_count": 100
+}

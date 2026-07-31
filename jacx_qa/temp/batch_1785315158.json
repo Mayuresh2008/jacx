@@ -1,0 +1,62 @@
+{
+  "batch_id": "batch_1785315158",
+  "timestamp": "2026-07-29 14:24:44",
+  "summary": {
+    "total_tested": 10,
+    "passed_count": 8,
+    "failed_count": 2,
+    "pass_rate_percent": 80.0,
+    "top_bug_category": "query_extraction_bug",
+    "bug_type_counts": {
+      "query_extraction_bug": 1,
+      "memory_resolution_bug": 1
+    },
+    "category_failure_counts": {
+      "platform_search": 1,
+      "memory_read": 1
+    },
+    "route_failure_counts": {
+      "platform_search": 1,
+      "unsupported": 1
+    },
+    "system_diagnoses": [
+      {
+        "component": "query_extractor",
+        "root_cause": "Browser search query extractor is not removing browser trigger words or memory keywords before forming target search URL.",
+        "remediation": "Update query_extraction module to strip phrases like 'saved browser', 'in Brave', and 'using preferred browser' before web routing."
+      },
+      {
+        "component": "memory_system",
+        "root_cause": "Memory write and read handlers use inconsistent canonical key normalization (e.g. default_browser vs preferred_browser).",
+        "remediation": "Standardize key normalization across local memory and Supabase persistence layers in normalize_memory_key()."
+      }
+    ],
+    "grouped_failures": {
+      "query_extraction_bug": [
+        {
+          "test_id": "TC-003",
+          "input": "find github repos for vector databases",
+          "category": "platform_search",
+          "route": "platform_search",
+          "fail_reasons": [
+            "Query extractor returned full raw command without cleaning"
+          ]
+        }
+      ],
+      "memory_resolution_bug": [
+        {
+          "test_id": "TC-008",
+          "input": "hey jacx, do you know what my default browser is?",
+          "category": "memory_read",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected memory read route, got unsupported"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785315158",
+    "elapsed_seconds": 125.96
+  },
+  "result_count": 10
+}

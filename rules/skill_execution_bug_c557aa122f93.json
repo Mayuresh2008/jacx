@@ -1,0 +1,89 @@
+{
+  "bug_type": "skill_execution_bug",
+  "category": "skill_listing",
+  "expected_route": "unsupported",
+  "root_cause": "Skill pattern matched but execution handler failed to produce correct output.",
+  "remediation": "Verify skill execution pipeline connects pattern matches to correct action handlers.",
+  "component": "skill_manager",
+  "confidence": 1.0,
+  "occurrences": 9,
+  "example_failures": [
+    {
+      "command": "list pending sklls",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "hey jacx, what skills have you learned so far?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "hey jacx, what skills have you learned so far?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "list pending sklls",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "shw learned skills",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "shw learned skills",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "hey jacx, what skills have you learned so far?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "hey jacx, what skills have you learned so far?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "shw learned skills",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    },
+    {
+      "command": "hey jacx, what skills have you learned so far?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected skill_command route, got unsupported"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Expected skill_command route, got unsupported"
+  ],
+  "source_batch": "batch_1785315403",
+  "rule_id": "c557aa122f93",
+  "created_at": "2026-07-29 14:48:02",
+  "updated_at": "2026-07-29 18:12:45"
+}

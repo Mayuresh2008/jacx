@@ -1,0 +1,75 @@
+{
+  "bug_type": "memory_resolution_bug",
+  "category": "memory_read",
+  "expected_route": "memory_command",
+  "root_cause": "Memory save/read commands fail due to key normalization mismatches, missing pattern recognition, or inconsistent canonical key handling. Unrecognized patterns: show savd project.",
+  "remediation": "Standardize memory key normalization and expand pattern recognition for save/read/get/inspect commands. For memory_read pattern, verify memory key normalization and pattern matching.",
+  "component": "memory_system",
+  "confidence": 1.0,
+  "occurrences": 5,
+  "example_failures": [
+    {
+      "command": "show savd project folder",
+      "actual_response": "Could not process project note command.",
+      "fail_reasons": [
+        "Expected memory read route, got project_note_command"
+      ]
+    },
+    {
+      "command": "can you remind me what project path I saved earlier?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected memory read route, got unsupported"
+      ]
+    },
+    {
+      "command": "jacx, keep in mind that I prefer dark theme",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected memory route, got unsupported"
+      ]
+    },
+    {
+      "command": "show savd project folder",
+      "actual_response": "Could not process project note command.",
+      "fail_reasons": [
+        "Expected memory read route, got project_note_command"
+      ]
+    },
+    {
+      "command": "hey jacx, do you know what my default browser is?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected memory read route, got unsupported"
+      ]
+    },
+    {
+      "command": "show savd project folder",
+      "actual_response": "Could not process project note command.",
+      "fail_reasons": [
+        "Expected memory read route, got project_note_command"
+      ]
+    },
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "hey jacx, do you know what my default browser is?",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected memory read route, got unsupported"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Expected memory read route, got project_note_command"
+  ],
+  "source_batch": "batch_1785314643",
+  "rule_id": "97b17b40b8eb",
+  "created_at": "2026-07-29 14:16:05",
+  "updated_at": "2026-07-29 18:12:45"
+}

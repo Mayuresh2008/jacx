@@ -1,0 +1,75 @@
+{
+  "bug_type": "memory_resolution_bug",
+  "category": "memory_save",
+  "expected_route": "memory_command",
+  "root_cause": "Memory save/read commands fail due to key normalization mismatches, missing pattern recognition, or inconsistent canonical key handling.",
+  "remediation": "Standardize memory key normalization and expand pattern recognition for save/read/get/inspect commands. For memory_save pattern, verify memory key normalization and pattern matching.",
+  "component": "memory_system",
+  "confidence": 1.0,
+  "occurrences": 6,
+  "example_failures": [
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "jacx, keep in mind that I prefer dark theme",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected memory route, got unsupported"
+      ]
+    },
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+      "actual_response": "What would you like me to search for?",
+      "fail_reasons": [
+        "Expected memory route, got browser_search_memory"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Expected memory route, got browser_search_memory"
+  ],
+  "source_batch": "batch_1785316506",
+  "rule_id": "4f30753c9232",
+  "created_at": "2026-07-29 14:47:12",
+  "updated_at": "2026-07-29 18:12:45"
+}

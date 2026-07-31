@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": 1785415804.9478068,
+    "from_mode": "shadow",
+    "to_mode": "disabled",
+    "reason": "auto_rollback_consecutive_regressions",
+    "consecutive_regressions": 0,
+    "stats": {
+      "total_comparisons": 3,
+      "routes_matched": 0,
+      "routes_differed": 3,
+      "actions_matched": 3,
+      "actions_differed": 0,
+      "both_succeeded": 0,
+      "old_only_succeeded": 3,
+      "new_only_succeeded": 0,
+      "neither_succeeded": 0,
+      "avg_old_elapsed_ms": 352.4048328399658,
+      "avg_new_elapsed_ms": 628.8237571716309
+    }
+  }
+]

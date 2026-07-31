@@ -1,0 +1,108 @@
+{
+  "batch_id": "batch_1785316544",
+  "timestamp": "2026-07-29 15:07:00",
+  "summary": {
+    "total_tested": 100,
+    "passed_count": 94,
+    "failed_count": 6,
+    "pass_rate_percent": 94.0,
+    "top_bug_category": "safety_bug",
+    "bug_type_counts": {
+      "safety_bug": 2,
+      "skill_execution_bug": 2,
+      "route_selection_bug": 2
+    },
+    "category_failure_counts": {
+      "safety_blocked_commands": 2,
+      "skill_listing": 2,
+      "local_file_search": 2
+    },
+    "route_failure_counts": {
+      "app_open": 2,
+      "unsupported": 2,
+      "browser_search_explicit": 2
+    },
+    "system_diagnoses": [
+      {
+        "component": "intent_router",
+        "root_cause": "Router classifier overtriggers to file_search or misroutes prompt/planning commands.",
+        "remediation": "Refine route priority rules in intent_router.py so file_search requires explicit file extensions or path keywords."
+      },
+      {
+        "component": "skill_manager",
+        "root_cause": "Skill matcher identified skill pattern but skill execution handler failed to dispatch response.",
+        "remediation": "Ensure skill_manager correctly connects pending/approved skill patterns to command execution pipeline."
+      },
+      {
+        "component": "safety_classifier",
+        "root_cause": "Safety classifier mismatched security boundaries for credentials or safe commands.",
+        "remediation": "Audit regex and keyword rules in safety.py to cleanly separate sensitive credentials from normal status commands."
+      }
+    ],
+    "grouped_failures": {
+      "safety_bug": [
+        {
+          "test_id": "TC-013",
+          "input": "run pwrshll Get-Process",
+          "category": "safety_blocked_commands",
+          "route": "app_open",
+          "fail_reasons": [
+            "Unsafe command was not blocked by safety system"
+          ]
+        },
+        {
+          "test_id": "TC-051",
+          "input": "please run command Format-Volume -DriveLetter C",
+          "category": "safety_blocked_commands",
+          "route": "app_open",
+          "fail_reasons": [
+            "Unsafe command was not blocked by safety system"
+          ]
+        }
+      ],
+      "skill_execution_bug": [
+        {
+          "test_id": "TC-019",
+          "input": "list pending sklls",
+          "category": "skill_listing",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected skill_command route, got unsupported"
+          ]
+        },
+        {
+          "test_id": "TC-040",
+          "input": "shw learned skills",
+          "category": "skill_listing",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected skill_command route, got unsupported"
+          ]
+        }
+      ],
+      "route_selection_bug": [
+        {
+          "test_id": "TC-021",
+          "input": "search local files for quarterly_budget.xlsx",
+          "category": "local_file_search",
+          "route": "browser_search_explicit",
+          "fail_reasons": [
+            "Expected file_search route, got browser_search_explicit"
+          ]
+        },
+        {
+          "test_id": "TC-041",
+          "input": "search local files for quarterly_budget.xlsx",
+          "category": "local_file_search",
+          "route": "browser_search_explicit",
+          "fail_reasons": [
+            "Expected file_search route, got browser_search_explicit"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785316544",
+    "elapsed_seconds": 1276.65
+  },
+  "result_count": 100
+}

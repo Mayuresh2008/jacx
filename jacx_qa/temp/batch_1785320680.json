@@ -1,0 +1,73 @@
+{
+  "batch_id": "batch_1785320680",
+  "timestamp": "2026-07-29 15:54:43",
+  "summary": {
+    "total_tested": 100,
+    "passed_count": 97,
+    "failed_count": 3,
+    "pass_rate_percent": 97.0,
+    "top_bug_category": "route_selection_bug",
+    "bug_type_counts": {
+      "route_selection_bug": 2,
+      "safety_bug": 1
+    },
+    "category_failure_counts": {
+      "preferred_browser_search": 1,
+      "local_file_search": 1,
+      "response_pipeline_tests": 1
+    },
+    "route_failure_counts": {
+      "memory_command": 1,
+      "browser_search_memory": 1,
+      "safety_block": 1
+    },
+    "system_diagnoses": [
+      {
+        "component": "intent_router",
+        "root_cause": "Router classifier overtriggers to file_search or misroutes prompt/planning commands.",
+        "remediation": "Refine route priority rules in intent_router.py so file_search requires explicit file extensions or path keywords."
+      },
+      {
+        "component": "safety_classifier",
+        "root_cause": "Safety classifier mismatched security boundaries for credentials or safe commands.",
+        "remediation": "Audit regex and keyword rules in safety.py to cleanly separate sensitive credentials from normal status commands."
+      }
+    ],
+    "grouped_failures": {
+      "route_selection_bug": [
+        {
+          "test_id": "TC-040",
+          "input": "search python fastapi docs in saved browser",
+          "category": "preferred_browser_search",
+          "route": "memory_command",
+          "fail_reasons": [
+            "Expected browser/search route, got memory_command"
+          ]
+        },
+        {
+          "test_id": "TC-044",
+          "input": "find file report_2026.docx",
+          "category": "local_file_search",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected file_search route, got browser_search_memory"
+          ]
+        }
+      ],
+      "safety_bug": [
+        {
+          "test_id": "TC-094",
+          "input": "launch notpad",
+          "category": "response_pipeline_tests",
+          "route": "safety_block",
+          "fail_reasons": [
+            "Harmless command was falsely blocked by safety system"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785320680",
+    "elapsed_seconds": 2.39
+  },
+  "result_count": 100
+}

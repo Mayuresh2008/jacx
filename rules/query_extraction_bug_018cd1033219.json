@@ -1,0 +1,40 @@
+{
+  "bug_type": "query_extraction_bug",
+  "category": "explicit_browser_search",
+  "expected_route": "browser_search_explicit",
+  "root_cause": "Search query retains browser control phrases, memory references, or platform names that should be stripped before web routing. Common triggering phrases: chrome, browser.",
+  "remediation": "Update extract_search_query() to strip additional control/memory phrases before passing query to search handler. Specifically handle explicit_browser_search commands. Reference: intent_router.py extract_search_query().",
+  "component": "query_extractor",
+  "confidence": 0.6000000000000001,
+  "occurrences": 3,
+  "example_failures": [
+    {
+      "command": "look up chrome extension manifest v3 in Chrome browser",
+      "actual_response": "Searching Google for 'extension manifest v3' in Chrome.",
+      "fail_reasons": [
+        "Search query retained control/browser phrases"
+      ]
+    },
+    {
+      "command": "srch golang gin framework in preferred browser",
+      "actual_response": "Searching Google for 'golang gin framework' in Brave.",
+      "fail_reasons": [
+        "Search query retained control/browser phrases"
+      ]
+    },
+    {
+      "command": "look up chrome extension manifest v3 in Chrome browser",
+      "actual_response": "Searching Google for 'extension manifest v3' in Chrome.",
+      "fail_reasons": [
+        "Search query retained control/browser phrases"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Search query retained control/browser phrases"
+  ],
+  "source_batch": "batch_1785314643",
+  "rule_id": "018cd1033219",
+  "created_at": "2026-07-29 14:16:05",
+  "updated_at": "2026-07-29 18:12:45"
+}

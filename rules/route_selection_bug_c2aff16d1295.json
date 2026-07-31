@@ -1,0 +1,33 @@
+{
+  "bug_type": "route_selection_bug",
+  "category": "prompt_generation",
+  "expected_route": "prompt_generator",
+  "root_cause": "Command is misrouted to wrong handler (e.g., file_search for web queries, web search for file queries, or unknown fallback for recognized patterns). Misrouted to: unsupported.",
+  "remediation": "Refine route classification signals in intent_router.py to better distinguish between similar command patterns. For prompt_generation category, verify signals in intent_router.py _classify_prompt().",
+  "component": "intent_router",
+  "confidence": 0.55,
+  "occurrences": 2,
+  "example_failures": [
+    {
+      "command": "generat prompt for opencode db refactor",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected prompt_generator route, got unsupported"
+      ]
+    },
+    {
+      "command": "generat prompt for opencode db refactor",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected prompt_generator route, got unsupported"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Expected prompt_generator route, got unsupported"
+  ],
+  "source_batch": "batch_1785316506",
+  "rule_id": "c2aff16d1295",
+  "created_at": "2026-07-29 14:47:12",
+  "updated_at": "2026-07-29 18:12:45"
+}

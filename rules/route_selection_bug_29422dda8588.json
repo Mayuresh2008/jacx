@@ -1,0 +1,90 @@
+{
+  "bug_type": "route_selection_bug",
+  "category": "local_file_search",
+  "expected_route": "file_search",
+  "root_cause": "Command is misrouted to wrong handler (e.g., file_search for web queries, web search for file queries, or unknown fallback for recognized patterns). Misrouted to: browser_search_explicit, browser_search_memory.",
+  "remediation": "Refine route classification signals in intent_router.py to better distinguish between similar command patterns. For local_file_search category, verify signals in intent_router.py _classify_local().",
+  "component": "intent_router",
+  "confidence": 1.0,
+  "occurrences": 19,
+  "example_failures": [
+    {
+      "command": "fnd local file config.yaml",
+      "actual_response": "Searching Google for 'local file config.yaml' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "fnd local file config.yaml",
+      "actual_response": "Searching Google for 'local file config.yaml' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "fnd local file config.yaml",
+      "actual_response": "Searching Google for 'local file config.yaml' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "search python fastapi docs in saved browser",
+      "actual_response": "Could not process memory command.",
+      "fail_reasons": [
+        "Expected browser/search route, got memory_command"
+      ]
+    },
+    {
+      "command": "find file report_2026.docx",
+      "actual_response": "Searching Google for 'file report_2026.docx' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "find file report_2026.docx",
+      "actual_response": "Searching Google for 'file report_2026.docx' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "fnd local file config.yaml",
+      "actual_response": "Searching Google for 'local file config.yaml' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "fnd local file config.yaml",
+      "actual_response": "Searching Google for 'local file config.yaml' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "fnd local file config.yaml",
+      "actual_response": "Searching Google for 'local file config.yaml' in Brave.",
+      "fail_reasons": [
+        "Expected file_search route, got browser_search_memory"
+      ]
+    },
+    {
+      "command": "generat prompt for opencode db refactor",
+      "actual_response": "I'm not sure how to handle that. Could you rephrase?",
+      "fail_reasons": [
+        "Expected prompt_generator route, got unsupported"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Expected file_search route, got browser_search_memory",
+    "Expected file_search route, got browser_search_explicit"
+  ],
+  "source_batch": "batch_1785316468",
+  "rule_id": "29422dda8588",
+  "created_at": "2026-07-29 15:05:40",
+  "updated_at": "2026-07-29 18:12:45"
+}

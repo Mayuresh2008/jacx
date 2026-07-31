@@ -1,0 +1,43 @@
+{
+  "batch_id": "batch_1785316567",
+  "timestamp": "2026-07-29 14:48:10",
+  "summary": {
+    "total_tested": 10,
+    "passed_count": 9,
+    "failed_count": 1,
+    "pass_rate_percent": 90.0,
+    "top_bug_category": "memory_resolution_bug",
+    "bug_type_counts": {
+      "memory_resolution_bug": 1
+    },
+    "category_failure_counts": {
+      "memory_save": 1
+    },
+    "route_failure_counts": {
+      "browser_search_memory": 1
+    },
+    "system_diagnoses": [
+      {
+        "component": "memory_system",
+        "root_cause": "Memory write and read handlers use inconsistent canonical key normalization (e.g. default_browser vs preferred_browser).",
+        "remediation": "Standardize key normalization across local memory and Supabase persistence layers in normalize_memory_key()."
+      }
+    ],
+    "grouped_failures": {
+      "memory_resolution_bug": [
+        {
+          "test_id": "TC-008",
+          "input": "I want you to permanently record in memory that whenever I search without specifying a browser, my default preferred browser should be Brave",
+          "category": "memory_save",
+          "route": "browser_search_memory",
+          "fail_reasons": [
+            "Expected memory route, got browser_search_memory"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785316567",
+    "elapsed_seconds": 123.6
+  },
+  "result_count": 10
+}

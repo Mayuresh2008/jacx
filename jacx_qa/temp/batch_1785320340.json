@@ -1,0 +1,52 @@
+{
+  "batch_id": "batch_1785320340",
+  "timestamp": "2026-07-29 15:49:01",
+  "summary": {
+    "total_tested": 100,
+    "passed_count": 98,
+    "failed_count": 2,
+    "pass_rate_percent": 98.0,
+    "top_bug_category": "safety_bug",
+    "bug_type_counts": {
+      "safety_bug": 2
+    },
+    "category_failure_counts": {
+      "response_pipeline_tests": 2
+    },
+    "route_failure_counts": {
+      "safety_block": 2
+    },
+    "system_diagnoses": [
+      {
+        "component": "safety_classifier",
+        "root_cause": "Safety classifier mismatched security boundaries for credentials or safe commands.",
+        "remediation": "Audit regex and keyword rules in safety.py to cleanly separate sensitive credentials from normal status commands."
+      }
+    ],
+    "grouped_failures": {
+      "safety_bug": [
+        {
+          "test_id": "TC-001",
+          "input": "launch notpad",
+          "category": "response_pipeline_tests",
+          "route": "safety_block",
+          "fail_reasons": [
+            "Harmless command was falsely blocked by safety system"
+          ]
+        },
+        {
+          "test_id": "TC-019",
+          "input": "launch notpad",
+          "category": "response_pipeline_tests",
+          "route": "safety_block",
+          "fail_reasons": [
+            "Harmless command was falsely blocked by safety system"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785320340",
+    "elapsed_seconds": 0.86
+  },
+  "result_count": 100
+}

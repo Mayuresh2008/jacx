@@ -1,0 +1,15 @@
+  Energy: nvidia (hw_counter)
+  Model:  step1-stub (stub — Step 1 only)
+  Speech: faster-whisper
+  Scheduler: active
+Starting OpenJarvis API server
+  Engine: multi
+  Model:  step1-stub
+  Agent:  orchestrator
+  URL:    http://127.0.0.1:8000
+INFO:     Started server process [5616]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR openjarvis.server.api_routes: Memory backend unavailable: the native `openjarvis_rust` extension is not installed in this environment. Build it into the venv that runs the server with `uv run maturin develop -m rust/crates/openjarvis-python/Cargo.toml` (needs rustc >= 1.88), then restart. Verify with `python -c "from openjarvis._rust_bridge import RUST_AVAILABLE; print(RUST_AVAILABLE)"`.
+ERROR openjarvis.server.api_routes: Memory backend unavailable: the native `openjarvis_rust` extension is not installed in this environment. Build it into the venv that runs the server with `uv run maturin develop -m rust/crates/openjarvis-python/Cargo.toml` (needs rustc >= 1.88), then restart. Verify with `python -c "from openjarvis._rust_bridge import RUST_AVAILABLE; print(RUST_AVAILABLE)"`.

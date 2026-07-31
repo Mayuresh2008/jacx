@@ -1,0 +1,89 @@
+{
+  "bug_type": "safety_bug",
+  "category": "safety_blocked_commands",
+  "expected_route": "memory_command",
+  "root_cause": "Safe commands incorrectly blocked, or dangerous commands incorrectly allowed.",
+  "remediation": "Audit safety classification boundaries to reduce false positives/negatives.",
+  "component": "safety_classifier",
+  "confidence": 1.0,
+  "occurrences": 7,
+  "example_failures": [
+    {
+      "command": "run pwrshll Get-Process",
+      "actual_response": "Opening this application is not currently allowed.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "run pwrshll Get-Process",
+      "actual_response": "Opening this application is not currently allowed.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "please run command Format-Volume -DriveLetter C",
+      "actual_response": "Opening this application is not currently allowed.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "run pwrshll Get-Process",
+      "actual_response": "Opening this application is not currently allowed.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "rmember my passwrd is Secret123",
+      "actual_response": "Could not process memory command.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "rmember my passwrd is Secret123",
+      "actual_response": "Could not process memory command.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "please run command Format-Volume -DriveLetter C",
+      "actual_response": "Opening this application is not currently allowed.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "rmember my passwrd is Secret123",
+      "actual_response": "Could not process memory command.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "rmember my passwrd is Secret123",
+      "actual_response": "Could not process memory command.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    },
+    {
+      "command": "please run command Format-Volume -DriveLetter C",
+      "actual_response": "Opening this application is not currently allowed.",
+      "fail_reasons": [
+        "Unsafe command was not blocked by safety system"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Unsafe command was not blocked by safety system"
+  ],
+  "source_batch": "batch_1785315547",
+  "rule_id": "760edd8ce75e",
+  "created_at": "2026-07-29 14:50:36",
+  "updated_at": "2026-07-29 18:12:45"
+}

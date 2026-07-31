@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "category": "memory_save",
+    "name": "Memory Save",
+    "description": "Store preferences, credentials (safe tags), paths, or key-value entries in Jacx memory."
+  },
+  {
+    "id": 2,
+    "category": "memory_read",
+    "name": "Memory Read",
+    "description": "Retrieve previously saved preferences or values from memory."
+  },
+  {
+    "id": 3,
+    "category": "memory_update",
+    "name": "Memory Update",
+    "description": "Modify or overwrite existing memory keys and settings."
+  },
+  {
+    "id": 4,
+    "category": "preferred_browser_search",
+    "name": "Preferred Browser Search",
+    "description": "Web searches using the user's saved/preferred browser from memory."
+  },
+  {
+    "id": 5,
+    "category": "explicit_browser_search",
+    "name": "Explicit Browser Search",
+    "description": "Web searches targeting a specific named browser (e.g. Brave, Chrome, Edge)."
+  },
+  {
+    "id": 6,
+    "category": "general_web_search",
+    "name": "General Web Search",
+    "description": "Standard queries intended for default web search engine without browser reference."
+  },
+  {
+    "id": 7,
+    "category": "platform_search",
+    "name": "Platform Search",
+    "description": "Searches targeted at specific web platforms (e.g., YouTube, GitHub, StackOverflow)."
+  },
+  {
+    "id": 8,
+    "category": "local_file_search",
+    "name": "Local File Search",
+    "description": "Locate files, documents, or directories on the local machine."
+  },
+  {
+    "id": 9,
+    "category": "file_creation",
+    "name": "File Creation",
+    "description": "Generate or create new local files, scripts, or documents."
+  },
+  {
+    "id": 10,
+    "category": "prompt_generation",
+    "name": "Prompt Generation",
+    "description": "Produce targeted AI system/refactoring prompts for OpenCode or Antigravity."
+  },
+  {
+    "id": 11,
+    "category": "planning_reasoning",
+    "name": "Planning & Reasoning",
+    "description": "Multi-step architectural designs, system plans, or step-by-step reasoning."
+  },
+  {
+    "id": 12,
+    "category": "task_context_followup",
+    "name": "Task Context Follow-up",
+    "description": "Follow-up questions or modifications that rely on previous task context."
+  },
+  {
+    "id": 13,
+    "category": "skill_listing",
+    "name": "Skill Listing",
+    "description": "Display currently available, learned, or pending skills."
+  },
+  {
+    "id": 14,
+    "category": "skill_creation",
+    "name": "Skill Creation",
+    "description": "Teach Jacx new command patterns or skill definitions."
+  },
+  {
+    "id": 15,
+    "category": "skill_approval",
+    "name": "Skill Approval",
+    "description": "Review and approve pending user or system skills."
+  },
+  {
+    "id": 16,
+    "category": "approved_skill_execution",
+    "name": "Approved Skill Execution",
+    "description": "Execute a previously defined and approved skill pattern."
+  },
+  {
+    "id": 17,
+    "category": "status_debug_commands",
+    "name": "Status & Debug Commands",
+    "description": "System status, memory debug, router state, or cloud brain status lookups."
+  },
+  {
+    "id": 18,
+    "category": "response_pipeline_tests",
+    "name": "Response Pipeline Tests",
+    "description": "Local application launches, basic pipeline commands, and core routing."
+  },
+  {
+    "id": 19,
+    "category": "omniroute_cloud_fallback",
+    "name": "OmniRoute & Cloud Fallback",
+    "description": "Complex or ambiguous queries requiring multi-model reasoning or cloud brain."
+  },
+  {
+    "id": 20,
+    "category": "unsupported_vague_commands",
+    "name": "Unsupported or Vague Commands",
+    "description": "Gibberish, unsupported requests, or ambiguous single-word commands."
+  },
+  {
+    "id": 21,
+    "category": "safety_blocked_commands",
+    "name": "Safety Blocked Commands",
+    "description": "Commands involving credentials, unsafe shell commands, or destructive actions."
+  }
+]

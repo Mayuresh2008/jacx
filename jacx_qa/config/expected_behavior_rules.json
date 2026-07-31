@@ -1,0 +1,365 @@
+{
+  "memory_save": {
+    "category": "memory_save",
+    "expected_intent": {
+      "action": "save",
+      "target": "memory"
+    },
+    "must": [
+      "route to memory_command",
+      "return confirmation text",
+      "store normalized canonical key"
+    ],
+    "must_not": [
+      "route to file_search",
+      "return empty response",
+      "fail silently"
+    ]
+  },
+  "memory_read": {
+    "category": "memory_read",
+    "expected_intent": {
+      "action": "read",
+      "target": "memory"
+    },
+    "must": [
+      "route to memory_command",
+      "return stored value or non-empty notice",
+      "query canonical memory source"
+    ],
+    "must_not": [
+      "route to file_search",
+      "return empty response",
+      "ignore saved keys"
+    ]
+  },
+  "memory_update": {
+    "category": "memory_update",
+    "expected_intent": {
+      "action": "update",
+      "target": "memory"
+    },
+    "must": [
+      "route to memory_command",
+      "update canonical key value",
+      "return update status message"
+    ],
+    "must_not": [
+      "create duplicate conflicting keys",
+      "route to web search",
+      "return empty response"
+    ]
+  },
+  "preferred_browser_search": {
+    "category": "preferred_browser_search",
+    "expected_intent": {
+      "action": "search",
+      "target": "web",
+      "browser_source": "memory"
+    },
+    "must": [
+      "resolve preferred_browser from memory",
+      "clean query",
+      "route to browser_search_memory or browser_search_explicit",
+      "return visible text response"
+    ],
+    "must_not": [
+      "search full raw command",
+      "include saved/preferred browser phrase in query",
+      "route to file_search",
+      "return empty response"
+    ]
+  },
+  "explicit_browser_search": {
+    "category": "explicit_browser_search",
+    "expected_intent": {
+      "action": "search",
+      "target": "web",
+      "browser_source": "explicit"
+    },
+    "must": [
+      "extract explicit browser name",
+      "clean query",
+      "route to browser_search_explicit",
+      "return visible text response"
+    ],
+    "must_not": [
+      "search full raw command including browser name",
+      "route to file_search",
+      "return empty response"
+    ]
+  },
+  "general_web_search": {
+    "category": "general_web_search",
+    "expected_intent": {
+      "action": "search",
+      "target": "web"
+    },
+    "must": [
+      "route to browser_search_explicit or platform_search",
+      "clean query string",
+      "return non-empty response"
+    ],
+    "must_not": [
+      "route to file_search",
+      "execute local shell commands",
+      "return empty response"
+    ]
+  },
+  "platform_search": {
+    "category": "platform_search",
+    "expected_intent": {
+      "action": "search",
+      "target": "platform"
+    },
+    "must": [
+      "identify target platform",
+      "clean platform search query",
+      "route to platform_search or browser_search_explicit",
+      "return non-empty response"
+    ],
+    "must_not": [
+      "include platform trigger words in clean query",
+      "route to file_search",
+      "return empty response"
+    ]
+  },
+  "local_file_search": {
+    "category": "local_file_search",
+    "expected_intent": {
+      "action": "search",
+      "target": "file"
+    },
+    "must": [
+      "route to file_search",
+      "extract filename or file pattern",
+      "return file search status or results"
+    ],
+    "must_not": [
+      "route to browser_search",
+      "execute arbitrary code",
+      "return empty response"
+    ]
+  },
+  "file_creation": {
+    "category": "file_creation",
+    "expected_intent": {
+      "action": "create",
+      "target": "file"
+    },
+    "must": [
+      "route to file_creation",
+      "validate safe path",
+      "return file creation status"
+    ],
+    "must_not": [
+      "overwrite critical system files",
+      "route to planning without file action",
+      "return empty response"
+    ]
+  },
+  "prompt_generation": {
+    "category": "prompt_generation",
+    "expected_intent": {
+      "action": "generate",
+      "target": "prompt"
+    },
+    "must": [
+      "route to prompt_generator",
+      "produce structured prompt document",
+      "return non-empty text"
+    ],
+    "must_not": [
+      "route to file_search",
+      "return raw unformatted text",
+      "return empty response"
+    ]
+  },
+  "planning_reasoning": {
+    "category": "planning_reasoning",
+    "expected_intent": {
+      "action": "plan",
+      "target": "architecture"
+    },
+    "must": [
+      "route to cloud_brain or planning_agent",
+      "return structured multi-step plan or explanation",
+      "return non-empty text"
+    ],
+    "must_not": [
+      "route to file_search overtrigger",
+      "fail on long inputs",
+      "return empty response"
+    ]
+  },
+  "task_context_followup": {
+    "category": "task_context_followup",
+    "expected_intent": {
+      "action": "continue",
+      "target": "context"
+    },
+    "must": [
+      "route to task_context",
+      "resolve context reference",
+      "return contextually relevant response"
+    ],
+    "must_not": [
+      "treat as unsupported gibberish",
+      "lose active context session",
+      "return empty response"
+    ]
+  },
+  "skill_listing": {
+    "category": "skill_listing",
+    "expected_intent": {
+      "action": "list",
+      "target": "skills"
+    },
+    "must": [
+      "route to skill_command",
+      "return list of skills or pending skills status",
+      "return non-empty text"
+    ],
+    "must_not": [
+      "route to web_search",
+      "fail silently",
+      "return empty response"
+    ]
+  },
+  "skill_creation": {
+    "category": "skill_creation",
+    "expected_intent": {
+      "action": "create",
+      "target": "skill"
+    },
+    "must": [
+      "route to skill_command",
+      "register pending or learned skill pattern",
+      "return skill creation status"
+    ],
+    "must_not": [
+      "execute unvalidated code",
+      "route to web_search",
+      "return empty response"
+    ]
+  },
+  "skill_approval": {
+    "category": "skill_approval",
+    "expected_intent": {
+      "action": "approve",
+      "target": "skill"
+    },
+    "must": [
+      "route to skill_command",
+      "mark skill as approved",
+      "return approval status"
+    ],
+    "must_not": [
+      "approve invalid or missing skill",
+      "route to unsupported",
+      "return empty response"
+    ]
+  },
+  "approved_skill_execution": {
+    "category": "approved_skill_execution",
+    "expected_intent": {
+      "action": "execute",
+      "target": "approved_skill"
+    },
+    "must": [
+      "route to skill_command",
+      "execute matching approved handler",
+      "return execution result text"
+    ],
+    "must_not": [
+      "execute unapproved skills",
+      "bypass safety checks",
+      "return empty response"
+    ]
+  },
+  "status_debug_commands": {
+    "category": "status_debug_commands",
+    "expected_intent": {
+      "action": "check",
+      "target": "status"
+    },
+    "must": [
+      "route to status_command",
+      "return diagnostic status details",
+      "return non-empty text"
+    ],
+    "must_not": [
+      "route to cloud_brain",
+      "fail with internal error",
+      "return empty response"
+    ]
+  },
+  "response_pipeline_tests": {
+    "category": "response_pipeline_tests",
+    "expected_intent": {
+      "action": "launch",
+      "target": "application"
+    },
+    "must": [
+      "route to app_open or basic_command",
+      "return launch status text",
+      "return non-empty message"
+    ],
+    "must_not": [
+      "route to file_search",
+      "hang processing pipeline",
+      "return empty response"
+    ]
+  },
+  "omniroute_cloud_fallback": {
+    "category": "omniroute_cloud_fallback",
+    "expected_intent": {
+      "action": "reason",
+      "target": "cloud_brain"
+    },
+    "must": [
+      "trigger cloud_brain fallback if enabled",
+      "return reasoned text response",
+      "handle cloud response validation"
+    ],
+    "must_not": [
+      "fail silently on cloud timeout",
+      "break local pipeline execution",
+      "return empty response"
+    ]
+  },
+  "unsupported_vague_commands": {
+    "category": "unsupported_vague_commands",
+    "expected_intent": {
+      "action": "unknown",
+      "target": "unknown"
+    },
+    "must": [
+      "route to unsupported or clarification response",
+      "return informative guidance message",
+      "stay safe"
+    ],
+    "must_not": [
+      "crash or throw unhandled exceptions",
+      "execute random commands",
+      "return empty response"
+    ]
+  },
+  "safety_blocked_commands": {
+    "category": "safety_blocked_commands",
+    "expected_intent": {
+      "action": "block",
+      "target": "unsafe"
+    },
+    "must": [
+      "route to safety_block",
+      "prevent unsafe execution or key storage",
+      "return clear security block warning message"
+    ],
+    "must_not": [
+      "execute destructive action",
+      "store raw password/credential",
+      "allow unauthorized shell execution"
+    ]
+  }
+}

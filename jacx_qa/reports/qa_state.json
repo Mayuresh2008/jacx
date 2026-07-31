@@ -1,0 +1,176 @@
+{
+  "qa_state": "stopped",
+  "last_batch_id": "batch_1785420357",
+  "last_report_path": "jacx_qa/reports/latest_report.json",
+  "last_fix_prompt_path": "jacx_qa/reports/opencode_fix_prompt.md",
+  "waiting_for_user_approval": false,
+  "last_started_at": "2026-07-30 19:35:57",
+  "last_completed_at": "2026-07-30 19:35:58",
+  "total_batches_run": 345,
+  "total_commands_tested": 33240,
+  "total_commands_passed": 33134,
+  "total_commands_failed": 106,
+  "overall_pass_rate_percent": 99.7,
+  "batches_history": [
+    {
+      "batch_id": "batch_1785328962",
+      "timestamp": "2026-07-29 18:12:45",
+      "tested": 100,
+      "passed": 100,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785328968",
+      "timestamp": "2026-07-29 18:12:50",
+      "tested": 100,
+      "passed": 100,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785328973",
+      "timestamp": "2026-07-29 18:12:56",
+      "tested": 100,
+      "passed": 100,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785328979",
+      "timestamp": "2026-07-29 18:13:04",
+      "tested": 100,
+      "passed": 100,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785328987",
+      "timestamp": "2026-07-29 18:13:12",
+      "tested": 100,
+      "passed": 100,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785328995",
+      "timestamp": "2026-07-29 18:13:17",
+      "tested": 100,
+      "passed": 100,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785413680",
+      "timestamp": "2026-07-30 17:44:41",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785416528",
+      "timestamp": "2026-07-30 18:32:09",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785417991",
+      "timestamp": "2026-07-30 18:56:31",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785418223",
+      "timestamp": "2026-07-30 19:00:24",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785418538",
+      "timestamp": "2026-07-30 19:05:38",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785418989",
+      "timestamp": "2026-07-30 19:13:09",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785419191",
+      "timestamp": "2026-07-30 19:16:31",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785419532",
+      "timestamp": "2026-07-30 19:22:12",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785419845",
+      "timestamp": "2026-07-30 19:27:25",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785420110",
+      "timestamp": "2026-07-30 19:31:51",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785420264",
+      "timestamp": "2026-07-30 19:34:25",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785420279",
+      "timestamp": "2026-07-30 19:34:39",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785420300",
+      "timestamp": "2026-07-30 19:35:00",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    },
+    {
+      "batch_id": "batch_1785420357",
+      "timestamp": "2026-07-30 19:35:57",
+      "tested": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate_percent": 100.0
+    }
+  ]
+}

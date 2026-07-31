@@ -1,0 +1,117 @@
+{
+  "batch_id": "batch_1785315403",
+  "timestamp": "2026-07-29 14:48:02",
+  "summary": {
+    "total_tested": 100,
+    "passed_count": 94,
+    "failed_count": 6,
+    "pass_rate_percent": 94.0,
+    "top_bug_category": "query_extraction_bug",
+    "bug_type_counts": {
+      "route_selection_bug": 1,
+      "query_extraction_bug": 2,
+      "skill_execution_bug": 2,
+      "memory_resolution_bug": 1
+    },
+    "category_failure_counts": {
+      "general_web_search": 1,
+      "platform_search": 2,
+      "skill_listing": 2,
+      "memory_save": 1
+    },
+    "route_failure_counts": {
+      "page_summary": 1,
+      "platform_search": 2,
+      "unsupported": 3
+    },
+    "system_diagnoses": [
+      {
+        "component": "query_extractor",
+        "root_cause": "Browser search query extractor is not removing browser trigger words or memory keywords before forming target search URL.",
+        "remediation": "Update query_extraction module to strip phrases like 'saved browser', 'in Brave', and 'using preferred browser' before web routing."
+      },
+      {
+        "component": "intent_router",
+        "root_cause": "Router classifier overtriggers to file_search or misroutes prompt/planning commands.",
+        "remediation": "Refine route priority rules in intent_router.py so file_search requires explicit file extensions or path keywords."
+      },
+      {
+        "component": "memory_system",
+        "root_cause": "Memory write and read handlers use inconsistent canonical key normalization (e.g. default_browser vs preferred_browser).",
+        "remediation": "Standardize key normalization across local memory and Supabase persistence layers in normalize_memory_key()."
+      },
+      {
+        "component": "skill_manager",
+        "root_cause": "Skill matcher identified skill pattern but skill execution handler failed to dispatch response.",
+        "remediation": "Ensure skill_manager correctly connects pending/approved skill patterns to command execution pipeline."
+      }
+    ],
+    "grouped_failures": {
+      "route_selection_bug": [
+        {
+          "test_id": "TC-050",
+          "input": "hey jacx, search for the latest tech news today",
+          "category": "general_web_search",
+          "route": "page_summary",
+          "fail_reasons": [
+            "Expected browser/search route, got page_summary"
+          ]
+        }
+      ],
+      "query_extraction_bug": [
+        {
+          "test_id": "TC-053",
+          "input": "find github repos for vector databases",
+          "category": "platform_search",
+          "route": "platform_search",
+          "fail_reasons": [
+            "Query extractor returned full raw command without cleaning"
+          ]
+        },
+        {
+          "test_id": "TC-068",
+          "input": "find github repo for autogpt",
+          "category": "platform_search",
+          "route": "platform_search",
+          "fail_reasons": [
+            "Query extractor returned full raw command without cleaning"
+          ]
+        }
+      ],
+      "skill_execution_bug": [
+        {
+          "test_id": "TC-094",
+          "input": "shw learned skills",
+          "category": "skill_listing",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected skill_command route, got unsupported"
+          ]
+        },
+        {
+          "test_id": "TC-098",
+          "input": "list pending sklls",
+          "category": "skill_listing",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected skill_command route, got unsupported"
+          ]
+        }
+      ],
+      "memory_resolution_bug": [
+        {
+          "test_id": "TC-097",
+          "input": "jacx, keep in mind that I prefer dark theme",
+          "category": "memory_save",
+          "route": "unsupported",
+          "fail_reasons": [
+            "Expected memory route, got unsupported"
+          ]
+        }
+      ]
+    },
+    "batch_id": "batch_1785315403",
+    "elapsed_seconds": 1279.72
+  },
+  "result_count": 100
+}

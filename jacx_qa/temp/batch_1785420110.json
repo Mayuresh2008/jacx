@@ -1,0 +1,19 @@
+{
+  "batch_id": "batch_1785420110",
+  "timestamp": "2026-07-30 19:31:51",
+  "summary": {
+    "total_tested": 10,
+    "passed_count": 10,
+    "failed_count": 0,
+    "pass_rate_percent": 100.0,
+    "top_bug_category": "None",
+    "bug_type_counts": {},
+    "category_failure_counts": {},
+    "route_failure_counts": {},
+    "system_diagnoses": [],
+    "grouped_failures": {},
+    "batch_id": "batch_1785420110",
+    "elapsed_seconds": 0.51
+  },
+  "result_count": 10
+}

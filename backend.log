@@ -1,0 +1,36 @@
+  ___                       _                  _     
+ / _ \ _ __   ___ _ __     | | __ _ _ ____   _(_)___ 
+| | | | '_ \ / _ \ '_ \ _  | |/ _` | '__\ \ / / / __|
+| |_| | |_) |  __/ | | | |_| | (_| | |   \ V /| \__ \
+ \___/| .__/ \___|_| |_|\___/ \__,_|_|    \_/ |_|___/
+      |_|                                            
+      Personal AI, On Personal Devices
+
+INFO:     127.0.0.1:65451 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64543 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64539 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64545 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58841 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55736 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61293 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61212 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61213 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61210 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64544 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52465 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55976 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55978 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55980 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61798 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51945 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55523 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52361 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64565 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52363 - "GET /v1/savings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60338 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55737 - "GET /veyra/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50369 - "GET /v1/approvals/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50370 - "GET /v1/managed-agents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51658 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50372 - "GET /v1/savings HTTP/1.1" 200 OK

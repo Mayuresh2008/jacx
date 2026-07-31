@@ -1,0 +1,33 @@
+{
+  "bug_type": "query_extraction_bug",
+  "category": "platform_search",
+  "expected_route": "platform_search",
+  "root_cause": "Search query retains browser control phrases, memory references, or platform names that should be stripped before web routing. Common triggering phrases: find, find github, github.",
+  "remediation": "Update extract_search_query() to strip additional control/memory phrases before passing query to search handler. Specifically handle platform_search commands. Reference: intent_router.py extract_search_query().",
+  "component": "query_extractor",
+  "confidence": 0.55,
+  "occurrences": 2,
+  "example_failures": [
+    {
+      "command": "find github repos for vector databases",
+      "actual_response": "Searching GitHub for 'find github repos for vector databases'.",
+      "fail_reasons": [
+        "Query extractor returned full raw command without cleaning"
+      ]
+    },
+    {
+      "command": "find github repo for autogpt",
+      "actual_response": "Searching GitHub for 'find github repo for autogpt'.",
+      "fail_reasons": [
+        "Query extractor returned full raw command without cleaning"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Query extractor returned full raw command without cleaning"
+  ],
+  "source_batch": "batch_1785315403",
+  "rule_id": "9e2361d98fbf",
+  "created_at": "2026-07-29 14:48:02",
+  "updated_at": "2026-07-29 14:48:02"
+}

@@ -1,0 +1,54 @@
+{
+  "bug_type": "query_extraction_bug",
+  "category": "preferred_browser_search",
+  "expected_route": "browser_search_memory",
+  "root_cause": "Search query retains browser control phrases, memory references, or platform names that should be stripped before web routing. Common triggering phrases: browser, search, using, saved, saved browser.",
+  "remediation": "Update extract_search_query() to strip additional control/memory phrases before passing query to search handler. Specifically handle preferred_browser_search commands. Reference: intent_router.py extract_search_query().",
+  "component": "query_extractor",
+  "confidence": 0.65,
+  "occurrences": 4,
+  "example_failures": [
+    {
+      "command": "search for docker using my saved browser",
+      "actual_response": "Searching Google for docker in Brave.",
+      "fail_reasons": [
+        "Search query retained control phrases"
+      ]
+    },
+    {
+      "command": "look up kubernetes in my preferred browser",
+      "actual_response": "Searching Google for kubernetes in Brave.",
+      "fail_reasons": [
+        "Search query retained control phrases"
+      ]
+    },
+    {
+      "command": "search rust async using saved browser",
+      "actual_response": "Searching Google for rust async in Brave.",
+      "fail_reasons": [
+        "Search query retained control phrases"
+      ]
+    },
+    {
+      "command": "find nginx config using browser",
+      "actual_response": "Searching Google for nginx config in Brave.",
+      "fail_reasons": [
+        "Search query retained control phrases"
+      ]
+    },
+    {
+      "command": "search redis docs using saved browser",
+      "actual_response": "Searching Google for redis docs in Brave.",
+      "fail_reasons": [
+        "Search query retained control phrases"
+      ]
+    }
+  ],
+  "top_fail_reasons": [
+    "Search query retained control phrases"
+  ],
+  "source_batch": "test_batch_001",
+  "rule_id": "e1d5871de84c",
+  "created_at": "2026-07-29 14:06:30",
+  "updated_at": "2026-07-29 18:12:45"
+}
